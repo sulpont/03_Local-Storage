@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel=”icon” href="./img/favicon.ico">
+    <title>fromis_9｜TOP</title>
+</head>
+
+<body>
+
+    <div class="theme">
+        <input type="checkbox" name="dark-mode" id="btn-dark-mode">
+        <p>ダークモード</p>
+    </div>
+
+    <section>
+        <div class="explain">
+            <h1>fromis_9の世界</h1>
+        </div>
+        <div class="youtube">
+            <iframe width="448" height="252"
+                src="https://www.youtube-nocookie.com/embed/zbjoHhqHRGk?si=-k10ZuFMHPlJTL0w"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section>
+        <div class="explain">
+            <p>fromis_9（プロミスナイン）は、韓国の8人組女性アイドルグループです。</p>
+            <p>初めての方にもメンバーの名前・顔・ポジションが分かりやすいように、<br>Local Storageを利用したデータベースを作成しました。</p>
+            <p><span>※画像はバイナリデータとして数枚登録可能ですが、不具合の原因にも...</span></p>
+        </div>
+
+        <div class="explain">
+            <h1>メンバー紹介</h1>
+        </div>
+
+        <div class="wrapper">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <ul class="carousel">
+                <li class="card">
+                    <div class="img"><img src="./img/saerom.png" alt="img" draggable="false"></div>
+                    <h2>LEE SAE ROM</h2>
+                    <span>イ セロム</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="./img/hayoung.png" alt="img" draggable="false"></div>
+                    <h2>SONG HA YOUNG</h2>
+                    <span>ソン ハヨン</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="./img/jiwon.png" alt="img" draggable="false"></div>
+                    <h2>PARK JI WON</h2>
+                    <span>パク ジウォン</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="./img/nagyung.png" alt="img" draggable="false"></div>
+                    <h2>LEE NA GYUNG</h2>
+                    <span>イ ナギョン</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="./img/jisun.png" alt="img" draggable="false"></div>
+                    <h2>ROH JI SUN</h2>
+                    <span>ノ ジソン</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="./img/seoyeon.png" alt="img" draggable="false"></div>
+                    <h2>LEE SEO YEON</h2>
+                    <span>イ ソヨン</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="./img/chaeyoung.png" alt="img" draggable="false"></div>
+                    <h2>LEE CHAE YOUNG</h2>
+                    <span>イ チェヨン</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="./img/gyuri.png" alt="img" draggable="false"></div>
+                    <h2>JANG GYU RI</h2>
+                    <span>チャン ギュリ</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="./img/jiheon.png" alt="img" draggable="false"></div>
+                    <h2>BAEK JI HEON</h2>
+                    <span>ペク ジホン</span>
+                </li>
+            </ul>
+            <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+
+    </section>
+
+    <div class="explain">
+        <h2>メンバーCRUD</h2>
+        <P>CRUDとは、データベース管理システム（DBRS）に必要とされる4つの主要な機能、<br>「作成（Create）」「読み出し（Read）」「更新（Update）」「削除（Delete）」<br>をそれぞれ頭文字で表したもののことである。
+        </P>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="filterEntries">
+                <div class="entries">
+                    Show <select name="" id="table_size">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select> entries
+                </div>
+
+                <div class="filter">
+                    <label for="search">検索:</label>
+                    <input type="search" name="" id="search" placeholder="Search by Name, Age, Position...">
+                </div>
+            </div>
+
+            <div class="addMemberBtn">
+                <button>新規登録</button>
+            </div>
+
+        </header>
+
+        <table>
+
+            <thead>
+                <tr class="heading">
+                    <th>No</th>
+                    <th>Picture</th>
+                    <th>Full Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Position 1</th>
+                    <th>Position 2</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+
+            <tbody class="userInfo">
+            </tbody>
+        </table>
+
+        <footer>
+            <span class="showEntries">Showing 1 to 10 of 50 entries</span>
+            <div class="pagination">
+                <button>Prev</button>
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>Next</button>
+            </div>
+        </footer>
+    </div>
+
+
+    <!--Popup Form-->
+
+    <div class="dark_bg">
+
+        <div class="popup">
+            <header>
+                <h2 class="modalTitle">Fill the Form</h2>
+                <button class="closeBtn">&times;</button>
+            </header>
+
+            <div class="body">
+                <form action="#" id="myForm">
+                    <div class="imgholder">
+                        <label for="uploadimg" class="upload">
+                            <input type="file" name="" id="uploadimg" class="picture">
+                            <i class="fa-solid fa-plus"></i>
+                        </label>
+                        <img src="./img/pic1.png" alt="" width="150" height="150" class="img">
+                    </div>
+
+                    <div class="inputFieldContainer">
+
+                        <div class="nameField">
+                            <div class="form_control">
+                                <label for="fName">First Name:</label>
+                                <input type="text" name="" id="fName" required>
+                            </div>
+
+                            <div class="form_control">
+                                <label for="lName">Last Name:</label>
+                                <input type="text" name="" id="lName" required>
+                            </div>
+                        </div>
+
+                        <div class="ageCityField">
+                            <div class="form_control">
+                                <label for="age">Age:</label>
+                                <input type="number" name="" id="age" required>
+                            </div>
+
+                            <div class="form_control">
+                                <label for="city">City:</label>
+                                <input type="text" name="" id="city" required>
+                            </div>
+                        </div>
+
+                        <div class="postPosition">
+                            <div class="form_control">
+                                <label for="position-1">Position 1:</label>
+                                <input type="text" name="" id="position-1" required>
+                            </div>
+
+                            <div class="form_control">
+                                <label for="position-2">Position 2:</label>
+                                <input type="text" name="" id="position-2" required>
+                            </div>
+                        </div>
+
+                        <!-- <div class="form_control">
+                            <label for="bDay">Birthday:</label>
+                            <input type="date" name="" id="bDay" required>
+                        </div> -->
+
+                    </div>
+                </form>
+            </div>
+
+            <footer class="popupFooter">
+                <button form="myForm" class="submitBtn">Submit</button>
+            </footer>
+        </div>
+
+    </div>
+
+
+
+    <div id="welcomePop-up" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>fromis_9の世界へようこそ</h2>
+            <p>This is your first visit!</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
+        integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
